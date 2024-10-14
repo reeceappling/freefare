@@ -348,7 +348,7 @@ func (t Ntag21xTag) CardUID() (string, error) {
 		return "", t.TranslateError(err)
 	}
 
-	return C.GoString(resultBytes), nil // TODO: fix?
+	return string(resultBytes), nil // TODO: fix?
 }
 
 func (t Ntag21xTag) FastRead(startPage, endPage uint8) ([]byte, error) {
