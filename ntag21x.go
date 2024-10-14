@@ -386,7 +386,7 @@ func (t Ntag21xTag) WriteUserData(data [144]byte) error {
 		}
 		err := t.Write(uint8(i)+4, toWrite)
 		if err != nil {
-			return err // TODO: quick return or nah?
+			return err // TODO: quick return or nah??
 			// TODO: revert tag?
 		}
 	}
