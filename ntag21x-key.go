@@ -68,11 +68,11 @@ func wrapNtag21xKey(k C.NTAG21xKey) *Ntag21xKey {
 //	}
 //
 //	key := NewNtag21x3K3DESKey(value)
-func NewNtag21xKey(value [24]byte) *Ntag21xKey {
-	//key := C.mifare_Ntag21x_3k3des_key_new_with_version((*C.uint8_t)(&value[0]))
-	key := C.ntag21x_key_new((*C.uint8_t)(&value[0])) // TODO: ?
-	return wrapNtag21xKey(key)
-}
+//func NewNtag21xKey(value [24]byte) *Ntag21xKey { // TODO: reenable
+//	//key := C.mifare_Ntag21x_3k3des_key_new_with_version((*C.uint8_t)(&value[0]))
+//	key := C.ntag21x_key_new((*C.uint8_t)(&value[0])) // TODO: ?
+//	return wrapNtag21xKey(key)
+//}
 
 // Create a new AES key. This function wraps the verbosely named function TODO: ?
 // mifare_Ntag21x_aes_key_new_with_version. To get a result equal to what
