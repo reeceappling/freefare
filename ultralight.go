@@ -25,6 +25,10 @@ type UltralightTag struct {
 	*tag
 }
 
+func (t UltralightTag) AsNtag213() Ntag21xTag {
+	return Ntag21xTag{tag: t.tag}
+}
+
 // Connect to a Mifare Ultralight tag. This causes the tag to be active.
 func (t UltralightTag) Connect() error {
 	r, err := C.mifare_ultralight_connect(t.ctag)

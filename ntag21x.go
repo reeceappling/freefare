@@ -356,7 +356,6 @@ func (t Ntag21xTag) FastRead(startPage, endPage uint8) ([]byte, error) {
 	var resultBytes = make([]byte, endPage-startPage+1) // TODO: ?
 	//var cString *C.char
 	//&cString
-	// TODO: read pages 0, 1, 2. Append them together, return as a string
 	r, err := C.ntag21x_fast_read(t.ctag, C.uint8_t(startPage), C.uint8_t(endPage), (*C.uint8_t)(&resultBytes[0])) // TODO: ptr ok here?
 	//defer C.free(unsafe.Pointer(resultBytes))
 	if r != 0 {
