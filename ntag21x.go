@@ -56,7 +56,7 @@ type Ntag21xTag struct {
 	*tag
 
 	// communication settings
-	WriteSettings, ReadSettings byte // TODO: ensure ok
+	//WriteSettings, ReadSettings byte // TODO: ensure ok
 }
 
 // Get last error. This function wraps ntag21x_last_error(). If
