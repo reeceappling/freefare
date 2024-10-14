@@ -69,7 +69,7 @@ func wrapTag(t C.FreefareTag, d nfc.Device, i *C.nfc_target) Tag {
 	case DESFire:
 		aTag = DESFireTag{tag, Default, Default}
 	case Ntag21x:
-		panic("Ntag_21x tags are not supported")
+		aTag = Ntag21xTag{tag, Default, Default} // TODO: fix
 	default:
 		panic("This shouldn't happen. Please report a bug.")
 	}
