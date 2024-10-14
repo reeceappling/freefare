@@ -1,4 +1,4 @@
-module github.com/reeceappling/freefare
+module github.com/reeceappling/freefarea
 
 go 1.12
 
